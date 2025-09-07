@@ -1,21 +1,21 @@
 #include <stdio.h>
 
 //Por Glaycon Oliveira
-// 30/08/2025
-// Primeiro exercício pratico Estácio 
+
 
 int main() { //atividade principal
 
     //cidade 1
     int carta_1, n_pontos_turisticos_1; //int numeros inteiros
     char estado_1; //char e apenas uma letra A a H
-    double area_1, pib_1, populacao_1; //float numeros com fraçoes
+    double area_1, pib_1, populacao_1, densidade_populacional_1, pib_per_capita_1; //float numeros com fraçoes
     char codigo_1[50], nome_da_cidade_1[50]; //char com definição de quantos caracteres pode conter no valor da variavel, ainda não entendi direito como funciona.
+
     
     //cidade 2
     int carta_2, n_pontos_turisticos_2; //int numeros inteiros
     char estado_2; //char e apenas uma letra A a H
-    double area_2, pib_2, populacao_2; //float numeros com fraçoes
+    double area_2, pib_2, populacao_2, densidade_populacional_2, pib_per_capita_2; //float numeros com fraçoes
     char codigo_2[50], nome_da_cidade_2[50]; //char com definição de quantos caracteres pode conter no valor da variavel, ainda não entendi direito como funciona.
 
     //Mensagem de Bem Vindo Colorido
@@ -39,6 +39,8 @@ int main() { //atividade principal
     scanf("%lf", &pib_1);
     printf("Insira o número de Pontos Turísticos da Cidade 1:");
     scanf("%i", &n_pontos_turisticos_1);
+    densidade_populacional_1 = (populacao_1 / area_1);
+    pib_per_capita_1 = (pib_per_capita_1 / populacao_1);
     printf("\n\n\n\033[1;32mObrigado por inserir todos os dados!\033[0m\n\n\n");
 
     //Proximas linhas 46 ate 62 Formulario para o usuario inserir os dados das variaveis!
@@ -59,6 +61,8 @@ int main() { //atividade principal
     scanf("%lf", &pib_2);
     printf("Insira o número de Pontos Turísticos da Cidade 2:");
     scanf("%i", &n_pontos_turisticos_2);
+    densidade_populacional_1 = (populacao_1 / area_1);
+    pib_per_capita_1 = (pib_per_capita_1 / populacao_1);
     printf("\n\n\n\033[1;32mObrigado por inserir todos os dados!\033[0m\n\n\n");
 
     //Exibir dados das cartas
@@ -71,6 +75,9 @@ int main() { //atividade principal
     printf("Área: %.2lf km²\n", area_1);
     printf("PIB: %.2lf bilhões de reais\n", pib_1);
     printf("Número de Pontos Turísticos: %i\n", n_pontos_turisticos_1);
+    printf("Densidade Populacional: %.2f", densidade_populacional_1);
+    printf("PIB per Capita: %.2f", pib_per_capita_1);
+    
     printf("---------------------------------------------\n\n\n");
 
     printf("--- Dados Cidade 2 %s\n ---", nome_da_cidade_2);
@@ -82,6 +89,8 @@ int main() { //atividade principal
     printf("Área: %.2lf km²\n", area_2);
     printf("PIB: %.2lf bilhões de reais\n", pib_2);
     printf("Número de Pontos Turísticos: %i\n", n_pontos_turisticos_2);
+    printf("Densidade Populacional: %.2f", densidade_populacional_2);
+    printf("PIB per Capita: %.2f", pib_per_capita_2);
     printf("---------------------------------------------\n\n\n");
 
 
